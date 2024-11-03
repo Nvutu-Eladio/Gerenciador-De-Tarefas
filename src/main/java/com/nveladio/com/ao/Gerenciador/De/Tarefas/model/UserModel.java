@@ -25,6 +25,8 @@ public class UserModel {
     private String name;
     private String password;
 
+    private Boolean ativo = true;
+
     @CreationTimestamp
     private LocalDateTime createdAt;
 
