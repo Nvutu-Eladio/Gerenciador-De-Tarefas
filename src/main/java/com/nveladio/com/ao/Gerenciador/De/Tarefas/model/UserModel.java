@@ -24,6 +24,11 @@ public class UserModel {
     private String username;
     private String name;
     private String password;
+    private String estado;
+    private String cidade;
+    private String bairro;
+    private String rua;
+    private String cep;
 
     private Boolean ativo = true;
 
