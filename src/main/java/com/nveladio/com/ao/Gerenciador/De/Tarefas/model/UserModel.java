@@ -1,14 +1,13 @@
 package com.nveladio.com.ao.Gerenciador.De.Tarefas.model;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @Data
@@ -24,11 +23,22 @@ public class UserModel {
     private String username;
     private String name;
     private String password;
+
+//    @Column(name = "ddi", columnDefinition = "TEXT")
+    private List<String> ddi;
+
+//    @Column(name = "ddd", columnDefinition = "TEXT")
+    private List<String> ddd;
+
+//    @Column(name = "telefone", columnDefinition = "TEXT")
+    private List<String> telefone;
     private String estado;
     private String cidade;
     private String bairro;
     private String rua;
     private String cep;
+    @JsonIgnore
+    private String numero;
 
     private Boolean ativo = true;
 
@@ -36,3 +46,7 @@ public class UserModel {
     private LocalDateTime createdAt;
 
 }
+
+
+
+
